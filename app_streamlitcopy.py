@@ -3,9 +3,9 @@ from openai import OpenAI
 from personagens import *
 
 # ==========================================
-# 🔑 API KEY
+# 🔑 API KEY (secure via Streamlit Secrets)
 # ==========================================
-client = OpenAI(api_key="OPENAI_API_KEY")
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 st.set_page_config(page_title="Elaboração de ESRA - FSC", layout="wide")
 
